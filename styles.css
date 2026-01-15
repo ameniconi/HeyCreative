@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --dark: #111111;
+  --light: #f5f5f5;
+  --muted: #666666;
+  --accent: #4f7cff;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 24px;
+}
+
+.intro {
+  font-size: 20px;
+  margin-bottom: 24px;
+  max-width: 720px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+p {
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+.services li,
+.platforms li,
+.brands li {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+/* BUTTONS */
+.cta {
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* CONTACT */
+.contact {
+  background: #ffffff;
+  padding: 48px;
+  border-radius: var(--radius);
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #ddd;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  section {
+    margin-bottom: 56px;
+  }
+}
