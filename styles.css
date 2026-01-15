@@ -18,6 +18,9 @@
 
 html {
   font-size: 16px;
+  scroll-behaviour: smooth;
+	font-variant-numeric: lining-nums;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
