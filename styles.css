@@ -166,6 +166,7 @@ p {
   border-radius: var(--radius);
   font-weight: 600;
   backdrop-filter: blur(6px);
+  align-content: center;
 }
 
 /* CONTACT */
