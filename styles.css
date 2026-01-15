@@ -212,11 +212,9 @@ footer {
     gap: 48px;
   }
 
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brands-grid {
+  .services-grid,
+  .platforms-grid,
+  .brands-grid{
     grid-template-columns: repeat(2, 1fr);
   }
 
