@@ -18,9 +18,8 @@
 
 html {
   font-size: 16px;
-  scroll-behaviour: smooth;
-	font-variant-numeric: lining-nums;
-	-webkit-font-smoothing: subpixel-antialiased;
+  scroll-behavior: smooth;
+  font-variant-numeric: lining-nums;
 }
 
 body {
@@ -93,7 +92,7 @@ p {
 
 .btn.primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.35);
 }
 
 .btn.secondary {
@@ -109,7 +108,7 @@ p {
 /* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -119,6 +118,13 @@ p {
   border-radius: var(--radius);
   font-weight: 600;
   backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.card .icon {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
 /* TWO COLUMN */
@@ -129,13 +135,21 @@ p {
 }
 
 /* PLATFORMS */
-.platforms {
-  list-style: none;
-  margin-top: 16px;
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.platforms li {
-  padding: 6px 0;
+.platform {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  backdrop-filter: blur(6px);
 }
 
 /* BRANDS */
@@ -190,17 +204,16 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
+  h1 { font-size: 40px; }
+  h2 { font-size: 26px; }
 
   .two-column {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .brands-grid {
