@@ -169,6 +169,23 @@ p {
   align-content: center;
 }
 
+.testimonial {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  opacity: 0.8;
+}
+
 /* CONTACT */
 .contact {
   background: rgba(255, 255, 255, 0.06);
