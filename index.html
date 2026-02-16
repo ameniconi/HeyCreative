@@ -65,7 +65,10 @@
   <section class="hero animate">
     <span class="eyebrow">Web Design & Development in Hull & East Yorkshire</span>
 
-    <h1>Affordable Web Design & Development in Hull & Across the UK</h1>
+    <h1>
+  I design and build conversion-focused websites for
+    <span class="rotating-text" aria-live="polite"></span>.
+  </h1>
 
     <p class="intro">
       Hey Creative is a friendly, affordable web design and development partner
@@ -212,3 +215,25 @@
 
 </body>
 </html>
+<script>
+  const audiences = [
+    "small businesses",
+    "startups",
+    "local traders",
+    "growing brands",
+    "bands",
+    "artists"
+  ];
+
+  let index = 0;
+  const textEl = document.querySelector(".rotating-text");
+
+  function rotateText() {
+    textEl.textContent = audiences[index];
+    index = (index + 1) % audiences.length;
+  }
+
+  rotateText();
+  setInterval(rotateText, 2500);
+</script>
+
