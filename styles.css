@@ -70,6 +70,12 @@ p {
   font-size: 20px;
 }
 
+.rotating-text {
+  font-weight: 600;
+  color: var(--accent, #000);
+  transition: opacity 0.3s ease;
+}
+
 /* BUTTONS */
 .cta {
   margin-top: 32px;
