@@ -167,7 +167,9 @@
         Tell us about your project
       </a>
 
-      <a href="javascript:void(0)" class="btn secondary">Meet the team</a>
+      <button type="button" class="btn secondary" id="about">
+        Meet the team
+      </button>
 
     </div>
 
@@ -980,6 +982,13 @@
   rotateText();
 
   setInterval(rotateText, 2500);
+
+  document.getElementById("about")?.addEventListener("click", () => {
+    document.getElementById("about")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
 
 </script>
 
