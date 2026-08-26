@@ -73,7 +73,7 @@ LAYOUT
 .page {
   width: min(var(--max-width), calc(100% - 48px));
   margin: 0 auto;
-  padding: 100px 0 40px;
+  padding: 50px 0 50px;
 }
 
 section {
@@ -90,7 +90,7 @@ HERO
 
 .hero {
   max-width: 1050px;
-  padding: 60px 0 80px;
+  padding: 0;
 }
 
 .hero h1 {
@@ -780,7 +780,7 @@ MOBILE
 
   .page {
     width: min(100% - 32px, var(--max-width));
-    padding-top: 48px;
+    padding-top: 30px;
   }
 
   section {
@@ -789,9 +789,6 @@ MOBILE
 
   /* Hero */
 
-  .hero {
-    padding: 30px 0 50px;
-  }
 
   .hero h1 {
     font-size: clamp(2.7rem, 13vw, 4rem);
