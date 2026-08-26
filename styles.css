@@ -110,7 +110,11 @@ HERO
 */
 .rotating-text {
   display: inline-block;
-  min-width: 7ch;
+  /*
+    Reserve a fixed amount of horizontal space so changing words
+    can never reflow the hero heading.
+  */
+  width: 9ch;
   min-height: 1.02em;
   color: var(--accent-light);
   font-weight: 800;
