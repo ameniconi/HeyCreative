@@ -68,7 +68,7 @@ a {
 .page {
   width: min(var(--max-width), calc(100% - 48px));
   margin: 0 auto;
-  padding: 100px 0 40px;
+  padding: 40px 0;
 }
 
 section {
@@ -749,7 +749,7 @@ footer p {
 @media (max-width: 900px) {
 
   .page {
-    padding-top: 70px;
+    padding-top: 20px;
   }
 
   section {
@@ -793,7 +793,7 @@ footer p {
 
   .page {
     width: min(100% - 32px, var(--max-width));
-    padding-top: 48px;
+    padding-top: 20px;
   }
 
   section {
