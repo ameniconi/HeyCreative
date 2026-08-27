@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
-:root {
+/* :root {
   --dark: #080b14;
   --dark-soft: #0f1320;
   --surface: rgba(255, 255, 255, 0.045);
@@ -11,6 +11,21 @@
   --muted-light: #cbd5e1;
   --accent: #ec4899;
   --accent-light: #f472b6;
+  --radius: 16px;
+  --max-width: 1200px;
+} */
+
+:root {
+--dark: #080B14;
+--dark-soft: #183C32;
+--surface: rgba(255, 255, 255, 0.045);
+--surface-hover: rgba(255, 255, 255, 0.075);
+--border: rgba(255, 255, 255, 0.09);
+--light: #F8FAFC;
+--muted: #94A3B8;
+--muted-light: #CBD5E1;
+--accent: #EC4899;
+--accent-light: #F472B6;
   --radius: 16px;
   --max-width: 1200px;
 }
