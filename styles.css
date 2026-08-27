@@ -1,31 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
-/* :root {
-  --dark: #080b14;
-  --dark-soft: #0f1320;
-  --surface: rgba(255, 255, 255, 0.045);
-  --surface-hover: rgba(255, 255, 255, 0.075);
-  --border: rgba(255, 255, 255, 0.09);
-  --light: #f8fafc;
-  --muted: #94a3b8;
-  --muted-light: #cbd5e1;
-  --accent: #ec4899;
-  --accent-light: #f472b6;
-  --radius: 16px;
-  --max-width: 1200px;
-} */
+/* =========================================================
+   THEME
+========================================================= */
 
 :root {
---dark: #080B14;
---dark-soft: #183C32;
---surface: rgba(255, 255, 255, 0.045);
---surface-hover: rgba(255, 255, 255, 0.075);
---border: rgba(255, 255, 255, 0.09);
---light: #F8FAFC;
---muted: #94A3B8;
---muted-light: #CBD5E1;
---accent: #EC4899;
---accent-light: #F472B6;
+  --dark: #080B14;
+  --dark-soft: #183C32;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-hover: rgba(255, 255, 255, 0.075);
+  --border: rgba(143, 175, 159, 0.16);
+  --light: #F8FAFC;
+  --muted: #8FAF9F;
+  --muted-light: #CBDDD4;
+  --accent: #EC4899;
+  --accent-light: #F472B6;
   --radius: 16px;
   --max-width: 1200px;
 }
@@ -50,12 +39,22 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at 80% 0%,
-      rgba(236, 72, 153, 0.08),
-      transparent 32rem),
-    linear-gradient(180deg,
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(24, 60, 50, 0.45),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(236, 72, 153, 0.10),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
       var(--dark) 0%,
-      var(--dark-soft) 100%);
+      #0B1714 45%,
+      var(--dark-soft) 100%
+    );
   color: var(--light);
   line-height: 1.65;
   min-height: 100vh;
@@ -71,8 +70,8 @@ a {
 }
 
 ::selection {
-  background: var(--accent);
-  color: #020617;
+  background: var(--dark-soft);
+  color: var(--light);
 }
 
 
@@ -239,19 +238,19 @@ p {
   transform: translateY(-3px);
   background: var(--accent-light);
   box-shadow:
-    0 12px 40px rgba(236, 72, 153, 0.3);
+    0 12px 40px rgba(236, 72, 153, 0.25);
 }
 
 .btn.secondary {
-  background: transparent;
+  background: rgba(24, 60, 50, 0.25);
   color: var(--light);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(143, 175, 159, 0.25);
 }
 
 .btn.secondary:hover {
   transform: translateY(-3px);
-  background: var(--surface-hover);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(24, 60, 50, 0.5);
+  border-color: rgba(143, 175, 159, 0.45);
 }
 
 
@@ -264,9 +263,16 @@ p {
   border: 1px solid var(--border);
   border-radius: 24px;
   background:
-    radial-gradient(circle at 100% 0%,
-      rgba(236, 72, 153, 0.1),
-      transparent 30rem),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(24, 60, 50, 0.55),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(236, 72, 153, 0.06),
+      transparent 22rem
+    ),
     var(--surface);
 }
 
@@ -322,7 +328,13 @@ p {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 60, 50, 0.12),
+      rgba(255, 255, 255, 0.02)
+    ),
+    var(--surface);
   transition:
     transform 0.25s ease,
     background 0.25s ease,
@@ -331,8 +343,14 @@ p {
 
 .card:hover {
   transform: translateY(-5px);
-  background: var(--surface-hover);
-  border-color: rgba(236, 72, 153, 0.25);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 60, 50, 0.28),
+      rgba(236, 72, 153, 0.04)
+    ),
+    var(--surface-hover);
+  border-color: rgba(143, 175, 159, 0.35);
 }
 
 .card p {
@@ -347,10 +365,15 @@ p {
   width: 46px;
   height: 46px;
   margin-bottom: 22px;
-  color: var(--accent-light);
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  color: var(--muted);
+  border: 1px solid rgba(143, 175, 159, 0.25);
   border-radius: 12px;
-  background: rgba(236, 72, 153, 0.06);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(24, 60, 50, 0.45),
+      rgba(236, 72, 153, 0.05)
+    );
 }
 
 .card .icon svg {
@@ -393,7 +416,7 @@ p {
   border-bottom: 1px solid var(--border);
 }
 
-.audience>span {
+.audience > span {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
@@ -427,20 +450,24 @@ p {
   background: var(--surface);
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .work-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(236, 72, 153, 0.25);
+  border-color: rgba(143, 175, 159, 0.35);
+  background: rgba(24, 60, 50, 0.12);
 }
 
 .work-image {
   aspect-ratio: 16 / 10;
   background:
-    linear-gradient(135deg,
-      rgba(236, 72, 153, 0.12),
-      rgba(255, 255, 255, 0.03));
+    linear-gradient(
+      135deg,
+      rgba(24, 60, 50, 0.55),
+      rgba(236, 72, 153, 0.08)
+    );
   border-bottom: 1px solid var(--border);
 }
 
@@ -454,7 +481,7 @@ p {
   padding: 26px;
 }
 
-.work-content>span {
+.work-content > span {
   display: block;
   margin-bottom: 10px;
   font-size: 0.7rem;
@@ -512,9 +539,16 @@ p {
   justify-content: center;
   aspect-ratio: 16 / 10;
   background:
-    radial-gradient(circle at 50% 20%,
-      rgba(236, 72, 153, 0.18),
-      transparent 18rem),
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(24, 60, 50, 0.75),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(236, 72, 153, 0.08),
+      transparent 14rem
+    ),
     rgba(255, 255, 255, 0.03);
 }
 
@@ -522,7 +556,7 @@ p {
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: -0.06em;
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(203, 221, 212, 0.2);
 }
 
 .team-content {
@@ -591,7 +625,13 @@ p {
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 60, 50, 0.16),
+      rgba(255, 255, 255, 0.02)
+    ),
+    var(--surface);
   text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
@@ -599,13 +639,21 @@ p {
   transition:
     background 0.2s ease,
     color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .brand:hover {
-  background: var(--surface-hover);
+  transform: translateY(-3px);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 60, 50, 0.35),
+      rgba(236, 72, 153, 0.05)
+    ),
+    var(--surface-hover);
   color: var(--light);
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(143, 175, 159, 0.3);
 }
 
 
@@ -619,7 +667,13 @@ p {
   padding: 56px;
   border: 1px solid var(--border);
   border-radius: 24px;
-  background: var(--surface);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(24, 60, 50, 0.35),
+      transparent 24rem
+    ),
+    var(--surface);
   text-align: center;
 }
 
@@ -672,12 +726,19 @@ p {
   position: relative;
   overflow: hidden;
   padding: 72px 56px;
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  border: 1px solid rgba(143, 175, 159, 0.25);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 90% 10%,
-      rgba(236, 72, 153, 0.16),
-      transparent 25rem),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(236, 72, 153, 0.14),
+      transparent 25rem
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(24, 60, 50, 0.65),
+      transparent 28rem
+    ),
     var(--surface);
 }
 
@@ -739,12 +800,10 @@ footer p {
 }
 
 @keyframes fadeUp {
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
 
@@ -753,7 +812,6 @@ footer p {
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
@@ -765,7 +823,6 @@ footer p {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
 }
 
 
@@ -774,7 +831,6 @@ footer p {
 ========================================================= */
 
 @media (max-width: 900px) {
-
   .page {
     padding-top: 20px;
   }
@@ -808,7 +864,6 @@ footer p {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
 }
 
 
@@ -817,7 +872,6 @@ footer p {
 ========================================================= */
 
 @media (max-width: 640px) {
-
   .page {
     width: min(100% - 32px, var(--max-width));
     padding-top: 20px;
@@ -903,7 +957,6 @@ footer p {
 
   .stats-grid {
     grid-template-columns: 1fr;
-
     gap: 28px;
   }
 
@@ -974,5 +1027,4 @@ footer p {
     padding-left: 16px;
     padding-right: 16px;
   }
-
 }
